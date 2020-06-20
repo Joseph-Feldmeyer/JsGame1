@@ -1,4 +1,5 @@
 import Paddle from '/src/paddle.mjs'; 
+import InputHandler from '/src/input.mjs'; 
 
 
 let canvas = document.getElementById("gameScreen"); 
@@ -11,7 +12,7 @@ const GAME_HEIGHT = 300;
 
 
 let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT); 
-paddle.draw(ctx); 
+new InputHandler(paddle); 
 
 let lastTime = 0; 
 
